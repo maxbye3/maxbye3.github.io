@@ -1,0 +1,13 @@
+Plumis had the product: their award-winning new type of fire sprinkler. But in an industry with more regulatory requirements than wine production, 
+Plumis needed a solid platform to allow installers to design fire sprinkler installations efficiently, legally and on-the-go. 
+I created an intelligent fire sprinkler design platform that allows installers to plan, simulate and share sprinkler systems.
+
+Go-Ahead London companies operate over 2,300 buses and employ over 7,600 staff operating from various sites in the capital.
+I designed/developed their new website with a custom made content management system where they could blog, update media and have their users check and map their travel plans.
+I also created an interative mapping tool that uses the TFL to update users in real time with Go-Ahead bus information. 
+
+A mobile game which sees players turn on each other as they try to work out who they can trust.
+Based on the popular physical card game Avalon, players must complete or sabotage global peace missions in a high-stakes game of espionage. 
+An internal product I pitched and co-developed at Rebel Minds.  
+
+
