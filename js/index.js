@@ -1,11 +1,25 @@
 
 var loadGit = false; // make sure git isn't int more than once
 
+
+
+
 // launch video at the right spot
 setTimeout(function(){ 
-  $("#moonvideo").fadeIn('slow');
-  document.getElementById('moonvideo').currentTime = 20;
-  document.getElementById('moonvideo').play();
+
+ // if mobile disable video
+ var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if(iOS){
+    $("#moonvideo").hide();
+    $(".mobileImg").fadeIn("slow");
+  }
+  else{
+    $("#moonvideo").fadeIn('slow');
+    document.getElementById('moonvideo').currentTime = 20;
+    document.getElementById('moonvideo').play();
+  }
+
+
  }, 1500);
 
 setInterval(function(){ 
