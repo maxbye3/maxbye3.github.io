@@ -20,6 +20,7 @@ setTimeout(function(){
   }
 
 
+
  }, 1500);
 
 setInterval(function(){ 
