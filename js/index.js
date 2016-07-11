@@ -113,4 +113,6 @@ addSelfie('13.gif');
 addSelfie('15.gif');
 addSelfie('17.gif');
 addSelfie('16.gif');
+addSelfie('18.gif');
+addSelfie('19.jpg');
 
