@@ -6989,7 +6989,7 @@ a.thumbnail:focus,
 a.img-thumbnail:focus,
 a.thumbnail.active,
 a.img-thumbnail.active {
-  background: #77bb97;
+  background: #523f53;
 }
 .thumbnail.img-circle:before,
 .img-thumbnail.img-circle:before {
@@ -7029,7 +7029,7 @@ a.img-thumbnail.active {
   margin-top: -23px;
   height: 46px;
   width: 100%;
-  background: #77bb97;
+  background: #523f53;
 }
 .thumbnail .thumbnail-caption .thumbnail-caption-inner {
   position: absolute;
@@ -7240,8 +7240,8 @@ ol li {
   -webkit-font-smoothing: antialiased;
 }
 .list.list-color-primary li:before {
-  color: #77bb97;
-  border-color: #77bb97;
+  color: #523f53;
+  border-color: #523f53;
 }
 .list.list-color-secondary li:before {
   color: #f7764d;
