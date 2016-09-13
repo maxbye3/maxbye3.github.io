@@ -43,6 +43,14 @@
 </head>
 <body>
 
+
+	<!-- BATHROOM VIDEO -->
+	<video width="400" autoplay muted loop class="bathroomVideo">
+	<source src="video/maxBathroom.mp4" type="video/mp4">
+	</video>
+
+	<!-- bathroom vid -->
+
 	<div class="top-wrapper">
 		
 		<!-- Header
@@ -73,33 +81,34 @@
 							</button>
 							
 							<ul data-breakpoint="992" class="flexnav">
-								<li class="active"><a onclick="homeClick()">Home</a>	
+								<li class="active">
+									<a onclick="homeClick(); $('.navbar-toggle').click();">Home</a>	
 								</li>
-								<li><a onclick="RMClick()">Work At Rebel Minds</a>
+								<li><a onclick="RMClick(); $('.navbar-toggle').click();">Work At Rebel Minds</a>
 									<ul>
-										<li><a onclick="RMClick()">Plumis</a></li>
-										<li><a onclick="RMClick()">Go-Ahead</a></li>
-										<li><a onclick="RMClick()">Deception</a></li>
-										<li><a href="https://www.aiesec.co.uk/">AISEC International</a></li>
-										<li><a href="https://s3.amazonaws.com/max-lol-commit/index.html">Git Commit Project</a></li>
+										<li><a onclick="RMClick(); $('.navbar-toggle').click();">Plumis</a></li>
+										<li><a onclick="RMClick(); $('.navbar-toggle').click();">Go-Ahead</a></li>
+										<li><a onclick="RMClick(); $('.navbar-toggle').click();">Deception</a></li>
+										<li><a onclick="$('.navbar-toggle').click();" href="https://www.aiesec.co.uk/">AISEC International</a></li>
+										<li><a onclick="$('.navbar-toggle').click();" href="https://s3.amazonaws.com/max-lol-commit/index.html">Git Commit Project</a></li>
 									</ul>
 								</li>
-								<li><a onclick="VFClick()">Stress Free</a>
+								<li><a onclick="VFClick(); $('.navbar-toggle').click();">Stress Free</a>
 								<ul>
-										<li><a onclick="VFClick()">About Virtually Free</a></li>
+										<li><a onclick="VFClick(); $('.navbar-toggle').click();">About Virtually Free</a></li>
 										<li><a data-toggle="modal" data-target="#myModal" onclick="appendVideo('https://www.youtube.com/embed/AMTK_FKz3XE','About Virtually Free')">Virtually Free Overview Video</a></li>
 										<li><a data-toggle="modal" data-target="#myModal" onclick="appendVideo('https://www.youtube.com/embed/FxmR65tFSDw','Tech For Good On Stress Free')">Tech For Good On Stress Free</a></li>
 									</ul>
 								</li>
-								<li><a onclick="blogClick()">Blogs</a>
+								<li><a onclick="BlogClick(); $('.navbar-toggle').click();">Blogs</a>
 									<ul>
-										<li><a href="#">Your Brain On Fun</a></li>
-										<li><a href="http://thoughts.rebelminds.com/">Rebel Minds Blog</a></li>
-										<li><a href="https://zombieconversation.wordpress.com/">Conversation With A Zombie</a></li>
-										<li><a onclick="contactClick()">Lol Commit</a></li>	
+										<li><a href="https://medium.com/@mr_moonhead/" onclick="BlogClick(); $('.navbar-toggle').click();">Your Brain On Fun</a></li>
+										<li><a href="http://thoughts.rebelminds.com/" onclick="BlogClick(); $('.navbar-toggle').click();">Rebel Minds Blog</a></li>
+										<li><a href="https://zombieconversation.wordpress.com/" onclick="BlogClick(); $('.navbar-toggle').click();">Conversation With A Zombie</a></li>
+										<li><a href="" onclick="contactClick()">Lol Commit</a></li>	
 									</ul>
 								</li>
-								<li><a onclick="contactClick()">Contact</a></li>
+								<li><a onclick="contactClick(); $('.navbar-toggle').click();">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -135,7 +144,7 @@
 					<div class="tp-banner" >
 						
                     <div style="width: 100%; height: 500px;"></div>
-					<h1 class="leaderboardText">physicist turned app developer <br>building products for mental health</h1>
+					<h1 class="leaderboardText">physicist turned app developer <br>building products for start-ups</h1>
 					<div class="gradientBG"></div>
 
 					<!-- moonhead video -->
@@ -178,6 +187,96 @@
 	================================================== -->
 	<main class="main-content">
 		<div class="container">
+
+			<!-- Better Work -->
+			<section class="section">
+
+				<div class="title-bordered" data-animation="fadeInUp" data-animation-delay="0">
+					<h2>Mr Moonhead</h2>
+				</div>
+
+				<h4 style="text-align: center;">
+					I'm an artist turned physicist turned videogame designer turned web developer.<br>
+					I use my skills to help others and build beautiful digital products.<br>
+					Check out my portfolio and <a onclick="RMClick()">more recent work for Rebel Minds.</a><br>
+				
+
+				<iframe class="portfolioVideo" width="560" height="315" src="https://www.youtube.com/embed/eewdB5u5vig" frameborder="0" allowfullscreen></iframe>
+</h4>
+				<div class="row">
+					<div class="col-sm-4 col-md-4">
+						<div class="icobox icobox__primary icobox__with-thumbs no-bottom-margin" data-animation="bounceIn" data-animation-delay="200">
+							<div class="icobox-holder">
+								<div class="triangle-top"></div>
+								<i class="fa fa-envira"></i>
+								<div class="triangle-bottom"></div>
+							</div>
+							<div class="icobox-desc">
+								<div class="icobox-desc-inner1">
+									<div class="icobox-desc-inner2">
+										<h3><a href="#">Virtually Free</a></h3>
+										<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum, eros at hendrerit volutpat, orci est viverra magna, ac pretium libero nisl tincidunt a1nte.</p>-->
+										<p>Project for Virtually Free, improving mental health with games.</p>
+
+								<div class="cta-btn more-btn">
+									<a href="http://rebelminds.com/work/plumis" class="btn btn-primary btn-lg">See More</a>
+								</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div class="icobox icobox__secondary icobox__with-thumbs no-bottom-margin" data-animation="bounceIn" data-animation-delay="400">
+							<div class="kindness icobox-holder">
+								<div class="triangle-top"></div>
+								<i class="fa fa-heart-o"></i>
+								<div class="triangle-bottom"></div>
+							</div>
+							<div class="icobox-desc">
+								<div class="icobox-desc-inner1">
+									<div class="icobox-desc-inner2">
+										<h3><a class="kindnessTxt" href="#">Kindness</a></h3>
+										<p>An app I'm currently working on to help people foster daily compassion.</p>										
+										<div class="cta-btn more-btn kindnessMore">
+										<a href="http://www.go-ahead-london.com/" class="btn btn-primary btn-lg">See More</a>
+									</div>
+									</div>
+								</div>
+							</div>
+							<div class="">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 col-md-4">
+						<div class="icobox icobox__tertiary icobox__with-thumbs no-bottom-margin" data-animation="bounceIn" data-animation-delay="600">
+							<div class="brain icobox-holder">
+								<div class="triangle-top"></div>
+								<i class="fa film fa-film"></i>
+								<div class="triangle-bottom"></div>
+							</div>
+							<div class="icobox-desc">
+								<div class="icobox-desc-inner1">
+									<div class="icobox-desc-inner2">
+										<h3><a class="brainTxt">Your Brain On Fun</a></h3>
+										<p>A weekly blog and animation on why you love the things you love</p>
+										<div class="cta-btn more-btn brainMore">
+											<a class="btn btn-primary btn-lg">Read Latest</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="deceptionMore">
+							
+			
+							</div>
+
+							</div>
+						</div>
+
+			</section>
+			<!-- Better / End -->
 			
 			<!-- Rebel Minds -->
 			<section class="section rebelminds">
@@ -186,8 +285,8 @@
 				</div>
 				
 				<div class="row">
-					<div class="col-sm-4 col-md-4">
-						<div class="icobox icobox__primary icobox__with-thumbs no-bottom-margin" data-animation="bounceIn" data-animation-delay="200">
+					<div class="plumis col-sm-4 col-md-4">
+						<div class=" icobox icobox__primary icobox__with-thumbs no-bottom-margin" data-animation="bounceIn" data-animation-delay="200">
 							<div class="icobox-holder">
 								<div class="triangle-top"></div>
 								<i class="fa fa-tint"></i>
@@ -196,7 +295,7 @@
 							<div class="icobox-desc">
 								<div class="icobox-desc-inner1">
 									<div class="icobox-desc-inner2">
-										<h3><a href="#">Plumis</a></h3>
+										<h3><a class="plumisTxt" href="#">Plumis</a></h3>
 										<!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elementum, eros at hendrerit volutpat, orci est viverra magna, ac pretium libero nisl tincidunt a1nte.</p>-->
 										<p>Plumis needed a solid platform to allow installers to design fire sprinkler installations efficiently, legally and on-the-go.</p>
 										<p>The Automist toolkit is an intelligent fire sprinkler design platform that allows installers to plan, simulate and share sprinkler systems.</p>
@@ -204,11 +303,11 @@
 								</div>
 							</div>
 							<div class="icobox-thumbs">
-								<ul class="cat-thumbs">
-									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis1.png','Plumis Automist Tool - Importing Blueprint')" class="alignnone"><img src="img/plumis1.png" alt="" class="img-responsive"></a></li>
-									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis2.png','Plumis Automist Tool - Measuring Floorplan')"  class="alignnone"><img src="img/plumis2.png" alt="" class="img-responsive"></a></li>
-									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis3.png','Plumis Automist Tool - Drawing Sprayheads')"  class="alignnone"><img src="img/plumis3.png" alt="" class="img-responsive"></a></li>
-									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis4.png','Plumis Automist Tool - Export Drawing')"  class="alignnone"><img src="img/plumis4.png" alt="" class="img-responsive"></a></li>
+								<ul class="cat-thumbs plumis-thumbs">
+									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis1.png','Plumis Automist Tool - Importing Blueprint')" class="alignnone plumisBorder"><img src="img/plumis1.png" alt="" class="img-responsive"></a></li>
+									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis2.png','Plumis Automist Tool - Measuring Floorplan')"  class="alignnone plumisBorder"><img src="img/plumis2.png" alt="" class="img-responsive"></a></li>
+									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis3.png','Plumis Automist Tool - Drawing Sprayheads')"  class="alignnone plumisBorder"><img src="img/plumis3.png" alt="" class="img-responsive"></a></li>
+									<li><a data-toggle="modal" data-target="#myModal" onclick="appendImage('img/plumis4.png','Plumis Automist Tool - Export Drawing')"  class="alignnone plumisBorder"><img src="img/plumis4.png" alt="" class="img-responsive"></a></li>
 								</ul>
 
 								<div class="cta-btn more-btn plumisMore">
@@ -291,36 +390,30 @@
 			</section>
 			<!-- Rebel Minds / End -->
 
-			<hr class="hr-lg" />
 
 			<!-- Stress Free -->
-			<section class="section virtuallyfree">
+			<section class="section kindnessSection">
+
+				<hr class="hr-lg" />
 				<div class="title title__lg" data-animation="fadeInUp" data-animation-delay="0">
 					<h2>Kindness <i>(2016)</i></h2>
 				</div>
 				<div class="row">
-					<div class="col-md-8 col-sm-6">
+					<div class="col-sm-6">
 						
 						<p>
-							I'm working on an app that will hopefully help people foster more compassion through daily kindness. <br>
+							I'm working on an app that will hopefully help people foster more compassion through daily kindness. <br><br>
 							Before it hits the app stores, I created a device emulator so people can try it out (not on mobile) <br>
 							and give me feedback before it's available on the app stores.</p>
-					<p> <b>Please be aware, I use high-quality .gifs suitable for mobile devices (not web) - so animation can (at times) look a little janky</b></p>
+					<p> <b>Please be aware, I use high-quality .gifs suitable for mobile devices (not web). <br> As a result, animations can (at times) look a little janky</b></p>
 							
 							
 							<a  href="http://mrmoonhead.com/emulator/"><button type="button" class="btn btn-default btn-primary"> Play with Kindness App Now </button></a>
 					</div>
 
-					<div class="col-md-4 col-sm-6" data-animation="bounceIn" data-animation-delay="200">
-						<a data-toggle="modal" data-target="#myModal" onclick="appendVideo('https://www.youtube.com/embed/AMTK_FKz3XE','About Virtually Free')" class="img-responsive thumbnail thumbnail-lg img-circle">
+					<div class="col-sm-3 col-sm-offset-1" data-animation="bounceIn" data-animation-delay="200">
+						<a class="img-responsive thumbnail thumbnail-lg img-circle">
 							<img src="img/kindness.png" alt="" class="img-circle">
-							<span class="thumbnail-caption">
-								<span class="thumbnail-caption-inner">
-									<span class="line line__left"></span>
-									Play Video
-									<span class="line line__right"></span>
-								</span>
-							</span>
 						</a>
 					</div>
 					
@@ -336,10 +429,11 @@
 						</div>
 					</div>-->
 				</div>
+				<hr><br>
 			</section>
 			<!-- Kindness End -->
 
-
+			
 			
 			<!-- Stress Free -->
 			<section class="section virtuallyfree">
@@ -461,7 +555,7 @@
 			<div class="spacer-lg"></div>
 
 			<!-- Blogs -->
-			<section class="section">
+			<section class="section blogSection">
 				<div class="title-bordered">
 					<h2>Blogs</h2>
 				</div>
@@ -549,7 +643,7 @@
 
 
 					<!-- Lol Commit Feed -->
-					
+					<div class="lol-section" style="display: none;"> 
 					<div class="lol-commit-feed">
 					<!-- Carousel Navigation -->
 					<div class="prev-next-holder pull-right hidden-xs">
@@ -573,11 +667,13 @@
 							
 						</div>
 						<!-- Carousel / End -->
+						<center><a class="btn btn-primary" onclick="hideLol()">For the love of God hide the commits</a></center>
+						
 
-						<center><a class="btn btn-primary">View Rebel Minds Lol Commit project</a></center>
-
-				</div>
+				</div></div>
 				<!-- Lol Commit Feed / End-->
+
+				<center><a class="btn btn-primary showLol" onclick="showLol()">View My Selfie Commits</a></center>
 
 				
 

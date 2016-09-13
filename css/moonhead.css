@@ -112,6 +112,90 @@ body{
     font-family: 'Bebas';
 }
 
+
+/*
+* KINDNESS
+*/
+.kindness{
+    background: #f74d80 !important;  
+}
+
+.kindness:hover{
+    background: #c75779 !important;  
+}
+
+
+.kindnessTxt{
+    color: #f74d80 !important;  
+}
+
+kindnessBorder {
+     color: #f74d80 !important;  
+}
+
+.kindnessMore a{
+    background: #f74d80 !important;  
+}
+
+.kindnessMore a:hover{
+    background: #c75779 !important;  
+}
+/* kindness */
+
+
+/*
+* YOUR BRAIN ON FUN
+*/
+.brain{
+    background: #c28dcf !important;  
+}
+
+.brain:hover{
+    background: #906a9a !important;  
+}
+
+
+.brainTxt{
+    color: #c28dcf !important;  
+}
+
+brainBorder {
+     color: #c28dcf !important;  
+}
+
+.brainMore a{
+    background: #c28dcf !important;  
+}
+
+.brainMore a:hover{
+    background: #906a9a !important;  
+}
+/* your brain on fun */
+
+/*
+* PLUMIS BUTTONS
+*/
+.plumis .icobox-holder{
+    background: #77b0bb !important;  
+}
+
+.plumis .icobox-holder:hover{
+background: #70939a !important; 
+}
+
+.plumisTxt{
+     color: #77b0bb !important;
+}
+
+
+.plumisMore a{
+    background: #77b0bb !important;  
+}
+
+.plumisMore a:hover{
+    background: #70939a !important;  
+}
+
 @media (max-width: 760px) {
 .leaderboardText {
     position: absolute;
@@ -119,7 +203,12 @@ body{
     left: 10px;
 }
 }
+/* plumis buttons */
 
+
+.title-bordered h2 {
+    margin-top: 50px;
+}
 
 .moon-logo{
     height: 100px; 
@@ -132,6 +221,36 @@ body{
     float: left; 
     padding: 5px;
     display: none;
+}
+
+body{
+    font-weight: 300 !important;
+}
+
+.kindnessSection{
+    margin-bottom: 50px;
+    display: none;
+}
+
+.blogSection{
+    display: none;
+}
+
+.virtuallyfree{
+    display: none;
+}
+
+
+.portfolioVideo{
+    margin: 50px;
+    margin-top: 40px;
+}
+
+.bathroomVideo{
+    display: none;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 
 @media (max-width: 992px) {

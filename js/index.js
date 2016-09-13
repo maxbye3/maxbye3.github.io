@@ -18,11 +18,25 @@ setTimeout(function(){
     document.getElementById('moonvideo').currentTime = 20;
     document.getElementById('moonvideo').play();
   }
-
-
-
-
  }, 1500);
+
+
+/*
+* HIDE LOL COMMIT PROJ
+*/
+function hideLol(){
+    $(".lol-section").hide();
+    $(".showLol").show();
+}
+
+/*
+* SHOW LOL COMMIT PROJ
+*/
+function showLol(){
+  $(".showLol").hide();
+  $(".lol-section").show();
+  $('html, body').animate({scrollTop: $(".lol-commit-feed").offset().top}, 1000); 
+}
 
 setInterval(function(){ 
     if(document.getElementById('moonvideo').currentTime >= 67){
@@ -55,11 +69,22 @@ function homeClick(){
 }
 
 function VFClick(){
+  $(".virtuallyfree").show();
   $('html, body').animate({scrollTop: $(".virtuallyfree").offset().top}, 1000);  
 }
 
 function RMClick(){
   $('html, body').animate({scrollTop: $(".rebelminds").offset().top}, 1000);  
+}
+
+function KindnessClick(){
+  $(".kindnessSection").show();
+  $('html, body').animate({scrollTop: $(".kindnessSection").offset().top}, 1000);  
+}
+
+function BlogClick(){
+  $(".blogSection").show();
+  $('html, body').animate({scrollTop: $(".blogSection").offset().top}, 1000);
 }
 
 function contactClick(){
