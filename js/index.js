@@ -30,6 +30,12 @@ if (window.chrome){
     document.getElementById('moonvideo').currentTime = 20;
     document.getElementById('moonvideo').play();
   }
+
+  // hide buttons if screen is less than 992px
+  if($(window).width() < 992){
+    $('.more-btn').hide();
+  }
+
  });
 
 

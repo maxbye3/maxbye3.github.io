@@ -212,18 +212,18 @@ background: #70939a !important;
     background: #70939a !important;  
 }
 
-
-
 @media (max-width: 760px) {
 
-
-
-
-.leaderboardText {
+  .leaderboardText {
     position: absolute;
     top: 100px;
     left: 10px;
-}
+  }
+
+   .more-btn{
+       display: none;
+   }
+
 }
 /* plumis buttons */
 
@@ -274,6 +274,9 @@ body{
    .nav-bar-moon{
        display: initial;
    }
+
+
+   
 }
 
 
