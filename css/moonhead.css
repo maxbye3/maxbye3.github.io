@@ -228,7 +228,14 @@ background: #70939a !important;
     width: 60%;
     }
 
+    .tp-banner-holder-inner{
+        padding-top: 0px;
+    }
 
+    .leaderboardText{
+        padding-top: 30px;
+        font-size: 10vw;
+    }
 }
 /* plumis buttons */
 
@@ -278,10 +285,7 @@ body{
    }
    .nav-bar-moon{
        display: initial;
-   }
-
-
-   
+   }   
 }
 
 
