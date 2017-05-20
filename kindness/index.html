@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mr. Moonhead's Emulator</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+</head>
+<body>
+
+<div class="warning">
+  <center>
+
+    <div class="disclaimer">
+      Video (not yet created) explains for first time users that Kindness App is all about developing self-compassion by having you reflect on one thing every day that you have done to benefit to someone (or yourself). 
+      <hr>
+      This website allows you to get hands on with <b>Kindness</b> before it's iOS/Android release<br>and let's you provide feedback. Consider it in pre-pre-alpha.
+      <hr>
+      <b>Please ignore animation pop-ins / jittery animation states.</b><br> 
+      Images are being loaded from web server. <br>
+      In release, they will be loaded from device so this won't be an issue
+      <br><br>
+      <p class="nextTip" style="cursor: pointer" onclick="continueToSite()">Continue</p>
+
+    </div>
+
+  </center>
+</div>
+<div class="site" style="display: none;">
+
+  
+  <center>
+
+<div class="alert">
+<b>Please help!</b> By leaving me feedback <button class='scrollBtn' onclick="scrollBtn()">click here</button>
+</div>
+
+
+ <div>
+     <div class="menu tablet" onclick="refresh()">
+        <img src="img/refresh.png" width="40px">
+        <br>REFRESH
+      </div>
+
+      <div class="menu tablet" onclick="tablet()">
+        <img src="img/tablet.png" width="40px">
+        <br>TABLET
+      </div>
+      
+      <div class="menu phone" onclick="phone()">
+        <img src="img/phone.png"  width="40px">
+        <br>PHONE
+      </div>
+</div>    
+    <p class="view-type">Currently viewing kindness app in phone view.</p>  
+    <iframe id="frameID" src="http://mrmoonhead.com/kindness-prod/"></iframe>
+
+<!-- CAROUSEL -->
+    <div style="carousel">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+
+
+
+
+
+  <ol class="carousel-indicators">
+
+
+
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <p>I haven't installed a limit on the number of kindness per day</p> 
+      <p>You can hit the refresh button and the app will remember your actions.</p>     
+    </div>
+    <div class="item">
+      <p>This allows you to see what happens as you rack up daily actions.</p> 
+      <p>You can also change the theme from summer to winter in settings menu.</p>
+    </div>
+      <div class="item">
+      <p>As well as finishing the app, there's a few next steps being put in place for Kindness.</p> 
+      <p>But if this sparks any ideas or you want to collaborate on Kindness, then let me know in the feedback below.</p>
+    </div>
+    </div>
+    <a href="#carousel-example-generic" role="button" data-slide="next">
+    <p class="nextTip">NEXT TIP</p>
+  </a>
+
+  </div>
+  
+<h2> Known issues:</h2>
+<ul>
+  <p style="text-decoration: line-through;">You need consistent navigational elements. Sometimes buttons are at the bottom, sometimes top left, sometimes top right.</p>
+  <p style="text-decoration: line-through;">Change theme pop up appears underneath "your Daily kindness is complete" message, is unclickable</p></br>
+</ul>
+
+  </center>
+
+
+<div>
+<center>
+<div class="feedbackSection">
+<h1>Feedback</h1>
+<p>
+  Thank you so much for taking the time to give thoughts on the app.<br>
+  The more you feedback, the better I can make this app (and future apps). <br>
+  Honestly, thank you, thank you. I really appreciate your time.
+</p>
+
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default">Bug</button>
+  <button type="button" class="active btn btn-default">Comment</button>
+  <button type="button" class="btn btn-default">Idea</button>
+</div>
+
+
+<br>
+<br>
+<div class="thanks-section" style="display: none;">
+  <h1>Thank you so much!</h1>
+  <p class="nextTip" onclick="moreFeedback()">Give more feedback</p>
+</div>
+<div class="contact-section">
+  <p>Your name:&nbsp;&nbsp;<input type="text" placeholder="optional" id="name" style="width: 70%; color: black;"></p>
+  <br>
+  <fieldset class="form-group">
+      <textarea class="form-control" id="message-area" rows="3" placeholder="enter your message here.."></textarea>
+    </fieldset>
+
+  <br>
+  <a><button class="btn btn-large btn-success" onclick="giveFeedback()">Submit</button></a>
+  <br>
+  <br>
+  <a href="http://mrmoonhead.com/"><button class="btn btn-large">Return To Mr. Moonhead Website</button></a>
+
+  </center>
+  </div>
+</div>
+</div>
+<script src="index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyArTT8e6Yuh_6ccw5Cwak2R5Bee50oMWII",
+    authDomain: "contact-kindness.firebaseapp.com",
+    databaseURL: "https://contact-kindness.firebaseio.com",
+    storageBucket: "contact-kindness.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
+</body>
+</html>
