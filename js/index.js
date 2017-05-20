@@ -5,7 +5,15 @@ var loadGit = false; // make sure git isn't int more than once
 
 
 // launch video at the right spot
-setTimeout(function(){ 
+$(function() {
+
+if (window.chrome){
+    $("[type=video\\\/mp4]").each(function()
+    {
+        $(this).attr('src', $(this).attr('src').replace(".m4v", ".mkv"));
+        $(this).attr('type', $(this).attr('type').replace("mp4", "mkv"));
+    });
+ }
 
  // if mobile disable video
  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
@@ -18,7 +26,7 @@ setTimeout(function(){
     document.getElementById('moonvideo').currentTime = 20;
     document.getElementById('moonvideo').play();
   }
- }, 1500);
+ });
 
 
 /*
