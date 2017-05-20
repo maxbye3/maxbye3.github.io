@@ -1,12 +1,16 @@
 
 var loadGit = false; // make sure git isn't int more than once
 
-
-
-
 // launch video at the right spot
 $(function() {
 
+// loop video
+$('video').on('ended', function () {
+  this.load();
+  this.play();
+});
+
+// if chrome
 if (window.chrome){
     $("[type=video\\\/mp4]").each(function()
     {
