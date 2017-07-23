@@ -9,132 +9,57 @@
 
 	<link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	
-	<link rel="stylesheet" href="https://codyhouse.co/demo/vertical-timeline/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/roadmap.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/front-page.css"> <!-- Resource style -->
 	<script src="https://codyhouse.co/demo/vertical-timeline/js/modernizr.js"></script><!-- Modernizr -->
 
 	<title>Kindness | The easiest way possible form a habit of being kind</title>
   </head>
   <body>
-  <style>
-  .frontPage{
-  	text-align: center;
-  	display: block;
-    text-align: -webkit-center;
-  }
-
-  header{
-  	border: red solid 2px;
-  	text-align: center;
-  	width: 70%;
-  }
-
-  ul{
-  	padding: 0px;
-  }
-
-  li{
-    list-style: none;
-    border: blue solid 1px;
-    width: 24.5%;
-    float: left;
-  }
-
-  li a p{
-  	    margin-top: 0px;
-  }
-
-  li a img{
-  	    width: 80%;
-  	    max-width: 90px;
-  }
-
-  nav .sonny{
-  	position: absolute;
-  }
-
-  .blurb{
-  	border: green solid 2px;
-  	margin-top: 30vh;
-  }
-
-  .blurb h1{
-  	margin: 0px;
-  }
-
-  .blurb button{
-    width: 288px;
-    padding: 8px;
-    border-radius: 100px;
-    border: 0px;
-    background: blue;
-    color: white;
-    margin-top: 20px;
-  }
-
-  .icon{
-  	width: 90px;
-  	vertical-align: middle;
-  	margin-top: -25px;
-  }
-
-  @media (max-width: 660px){
-  	header{
-  	  width: 100%;
-  	}
-  	li{
-	    width: 24.2%;
-	}
-  }
-
-    @media (max-width: 660px){
-	  li{
-	    width: 24%;
-	}
-  }
-
-  /* roadmap */
-  .roadmap {
-    border: orange solid 1px;
-    margin-top: 100vh;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-  }
-  </style>
+ 
   	<sector class='frontPage'>
 		<header>
 			<nav>
-				<div class='sonny'>
-					SONNY ANIMATION
+				<div class="titleContainer">
+			      <h1>Kindness (the app)</h1>
 				</div>
-			    <h1>Kindness (the app)</h1>
+
 				<ul>
 					<li>
 					  <a href=''>
 					    <!-- QUESTION MARK -->
-					  	<img src='http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png'>
-					  	<p>What is this?</p>
+					  	<img src='img/icons/home/about.svg'>
+					  	<p><span>What is this?</span></p>
 					  </a>
 					</li>
 					<li>
 					  <a href=''>
 					    <!-- ROADMAP -->
-					  	<img src='http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png'>
-					  	<p>Road Map</p>
+					  	<img src='img/icons/home/roadmap.svg'>
+					  	<p><span>Road Map</span></p>
 					  </a>
 					</li>
-					<li>
+					
+						<li>
+						  <a href=''>
+						    <!-- ROADMAP -->
+						  	<img src='img/icons/home/join.svg'>
+						  	<p><span>Join The Cause</span></p>
+						  </a>
+						</li>
+						<li>
+							
 					  <a href=''>
 					    <!-- QUESTIONS -->
-					  	<img src='http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png'>
-					  	<p>Questions?</p>
+					  	<img src='img/icons/home/email.svg'>
+					  	<p><span>Questions?</span></p>
 					  </a>
 					</li>
 					<li>
 					  <a href=''>
 					    <!-- MOONHEAD -->
-					  	<img src='http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png'>
-					  	<p>Other Work</p>
+					  	<img src='img/icons/home/join.svg'>
+					  	<p><span>Other Work</span></p>
 					  </a>
 					</li>
 				</ul>
@@ -235,6 +160,42 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 		<script src="https://codyhouse.co/demo/vertical-timeline/js/main.js"></script> <!-- Resource jQuery -->
+		
+		<script>
+		/*
+		* GO TO
+		* On click go to a different part of the page
+		* @param - STRING where - where on the page to go too
+		*/
+		function goTo(where){
+		  if(where == 'road'){
+			  // $('.roadmap').offset().top;
+		  }
+		}
+				
+		/*
+		* DISLOCATE NAVBAR
+		* When scroll dislocate the header (make it fixed)
+		* If scroll is 0 then remove fixed
+		*/
+			$( window).scroll(function() {
+				$('.titleContainer, header p span').hide();
+				console.log($(window).scrollTop());
+				if($(window).scrollTop() == 0){
+					$('.titleContainer , header p span').show();					
+				}
+				
+				var roadmap = $(window).height() - ( $('.roadmap').offset().top / 2 );
+				
+				if($(window).scrollTop() > roadmap){
+					console.log('roadmap');
+				}
+				
+			});
+    /* position: fixed; */
+    /* width: 100%; */
+    /* padding: 0 20%; */
+		</script>
 
 . </body>
 </html>
