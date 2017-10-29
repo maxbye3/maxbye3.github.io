@@ -390,6 +390,8 @@ Main components
 @media only screen and (min-width: 1170px) {
   .cd-timeline-block {
     margin: 4em 0;
+    margin-left: 25px;
+    margin-right: 25px;
   }
   .cd-timeline-block:first-child {
     margin-top: 0;
@@ -505,6 +507,8 @@ Main components
     transform: scale(1);
   }
 }
+
+
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
@@ -524,6 +528,7 @@ Main components
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
   font-size: 0.8125rem;
+  font-family: "Open Sans", sans-serif
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
@@ -744,4 +749,14 @@ Main components
     -o-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.hyperlink{
+  color: #147bcf;
+  text-decoration: underline;
+  font-weight: bold;    
+}
+
+.blue {
+    background: #6699ce !important;
 }

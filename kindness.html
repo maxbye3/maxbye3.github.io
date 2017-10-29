@@ -6,58 +6,61 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
-
-	<link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
 	
+  <!-- Custom Bootstrap-->  
+  <link href="css/custom-bootstrap.css" rel="stylesheet" media="screen" class="base">
+  <link href="css/moonhead.css" rel="stylesheet" media="screen" class="base">
+	<!-- <link href='https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+	<link rel="stylesheet" href="css/contact.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/roadmap.css"> <!-- Resource style -->
 	<link rel="stylesheet" href="css/front-page.css"> <!-- Resource style -->
-	<script src="https://codyhouse.co/demo/vertical-timeline/js/modernizr.js"></script><!-- Modernizr -->
+	<!-- <script src="https://codyhouse.co/demo/vertical-timeline/js/modernizr.js"></script> Modernizr  -->
 
 	<title>Kindness | The easiest way possible form a habit of being kind</title>
   </head>
   <body>
- 
+   
   	<sector class='frontPage'>
 		<header>
 			<nav>
 				<div class="titleContainer">
-			      <h1>Kindness (the app)</h1>
+			      <h1>The Kindness App</h1>
 				</div>
 
 				<ul>
-					<li>
-					  <a href=''>
-					    <!-- QUESTION MARK -->
+					<!-- QUESTION MARK -->
+					<li class='what' onclick='goTo("what")'>
+					  <a>					    
 					  	<img src='img/icons/home/about.svg'>
 					  	<p><span>What is this?</span></p>
 					  </a>
 					</li>
-					<li>
-					  <a href=''>
-					    <!-- ROADMAP -->
+					 <!-- ROADMAP -->
+					<li class='road'>
+					  <a onclick='goTo("road")'>					   
 					  	<img src='img/icons/home/roadmap.svg'>
 					  	<p><span>Road Map</span></p>
 					  </a>
 					</li>
-					
-						<li>
+					 
+					<!-- JOIN THE CAUSE -->
+						<!-- <li class='cause'>
 						  <a href=''>
-						    <!-- ROADMAP -->
 						  	<img src='img/icons/home/join.svg'>
 						  	<p><span>Join The Cause</span></p>
 						  </a>
-						</li>
-						<li>
-							
-					  <a href=''>
-					    <!-- QUESTIONS -->
+						</li> -->
+
+						<!-- QUESTIONS -->
+						<li class='question'>							
+					  <a onclick='goTo("question")'>					    
 					  	<img src='img/icons/home/email.svg'>
 					  	<p><span>Questions?</span></p>
 					  </a>
 					</li>
-					<li>
-					  <a href=''>
-					    <!-- MOONHEAD -->
+					<!-- MOONHEAD WORK -->
+					<li class='work'>
+					  <a onclick='goTo("work")'>					    
 					  	<img src='img/icons/home/join.svg'>
 					  	<p><span>Other Work</span></p>
 					  </a>
@@ -66,136 +69,156 @@
 			</nav>
 		</header>
 		<div class='blurb'>
-            <h1> Use your <!-- PHONE_IMAGE --> <img class='icon' src='http://www.freeiconspng.com/uploads/cool-circle-designs-png-1.png'> </h1>
+            <h1> Use your <!-- PHONE_IMAGE --> <img class='icon' src='img/icons/home/mobile-phone.svg'> </h1>
             <h1> to be a kinder more compassionate person </h1>
             <button>
             	<h1>get started</h1>             
             </button>
-            <p><a href=''>Learn how Kindness app works</a></p>
+            <h1 class='learnMore'>(or learn how Kindness app works)</h1>
 		</div>
 	</sector>
 
 
 
 	<!-- Roadmap -->
-	<sector id="cd-timeline" class='roadmap cd-container'>
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-picture">
-				<img src="img/cd-icon-picture.svg" alt="Picture">
-			</div> <!-- cd-timeline-img -->
+	<sector id="cd-timeline" class='roadmapSection cd-container'>
 
+		<div></div>
+
+		<div class="cd-timeline-block">			
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/icons/kindness-roadmap/highFive.svg" alt="Picture">
+			</div>
 			<div class="cd-timeline-content">
-				<h2>Title of section 1</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 14</span>
+				<h2>Your Feedback is always the priority</h2>
+				<p>If you see anything wrong / have a suggestion, I'll attack that as soon as humanly possible.</p>
+				<!-- <a href="#0" class="cd-read-more">Read more</a> -->
+				<!-- <span class="cd-date">Jan 14</span> -->
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+				<img src="" alt="Movie">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 18</span>
+				<h2>Notifications & Suggestions</h2>
+				<p>I would like to revamp the suggestions feature. So that, you can slide from one to the other (think Tinder).
+					And send a local notification if the Compassion Challenge is being been taken on.
+				</p>
+				<!-- <a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 18</span> -->
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-picture">
-				<img src="img/cd-icon-picture.svg" alt="Picture">
+			<div class="cd-timeline-img cd-picture blue">
+				<img src="img/icons/kindness-roadmap/android.svg" alt="Picture">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Jan 24</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Title of section 4</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 14</span>
+				<h2>Android Release</h2>
+				<p>Don't worry. I haven't forgotten about you.</p>
+				<p>Just testing and getting the app right on iPad & iPhones first!</p>
+				<!-- <a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Jan 24</span> -->
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
+				<img src="img/icons/kindness-roadmap/success.svg" alt="Location">
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
-				<h2>Title of section 5</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 18</span>
+				<h2>Combine the compassion</h2>
+				<p>At the minute, the app records your personal kindness.</p>
+				<p>But wouldn't it be cool if we could combine all our individual actions and accomplish something huge?</p>
+				<p>If you have any ideas please contact me below in the <span class='hyperlink'>help me section.</span></p>
+				<!-- <a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 14</span> -->
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
-
-		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
-			</div> <!-- cd-timeline-img -->
-
-			<div class="cd-timeline-content">
-				<h2>Final Section</h2>
-				<p>This is the content of the last section</p>
-				<span class="cd-date">Feb 26</span>
-			</div> <!-- cd-timeline-content -->
-		</div> <!-- cd-timeline-block -->
+   </div></div>
 	</section> <!-- cd-timeline -->
 
+	<!-- CONTACT SECTION  -->
+		<div class='questionSection row'>
+			<div class='col-md-6 description'>
+				<h1> The app is out please download it! </h1>
+				<p> Your feedback will be the most amount of help 
+					& I'm looking for any oppurtunity to talk / collaborate / 
+					improve the app so if you have any idea, I'm keen to listen.
+				</p>
+				<p>
+					If anything comes to mind or you have any thoughts / suggestions / threats please contact me either using the options in the app or in the form above.
+				</p>
+			</div>
+		  <div class='col-md-6 form description'>
+				<form action="https://formspree.io/maxbye@gmail.com" method="post" class='contact'>
+					<div class="input-group">
+					<input type="email" name="email" class="form-control" placeholder="Your Email" aria-describedby="basic-addon2">
+					<span class="input-group-addon" id="basic-addon2"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>	
+					</div>
+					<br>
+					<div class="input-group">
+					<input type="text" name="message" style="padding-top: 15px; padding-bottom: 100px;" class="form-control" placeholder="How Can I Help?" aria-describedby="basic-addon2">
+					<!--<textarea name="message" placeholder="Your message"></textarea>-->					
+					<span class="input-group-addon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+					</div>
+					<br>	
+					<input type="text" name="_gotcha" style="display:none">
+					<input type="hidden" name="_next" value="thanks.html">
+					<input class="btn btn-primary" type="submit" value="Send">
+				</form>
+			</div>
+		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="https://codyhouse.co/demo/vertical-timeline/js/main.js"></script> <!-- Resource jQuery -->
+
+	<!-- Contact -->
+
+			<!-- Header
+		================================================== -->
+		 <section class='workSection'>
+			<div class="top-wrapper">
+				<div class="tp-banner-holder">
+					<div class="tp-banner-holder-inner">
+						<div class="tp-banner-container">
+							<div class="tp-banner" >
+								
+							<div style="width: 100%; height: 500px;"></div>
+							<h1 class="leaderboardText">see more work.</h1>
+							<div class="gradientBG"></div>
+
+					
+							<div class="fullscreen-bg">
+							<img src="img/videoShot.png" width="100%" class="mobileImg" style="display:none;">
+							<video id="moonvideo" class="fullscreen-bg__video IEVideoFix" preload autoplay muted>
+							<source src="video/moonLapse.m4v" type="video/mp4">					
+							Your browser does not support HTML5 video.
+							</video>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	  </section> 
+		<!-- Header / End -->
+		<section id='copyright'>
+			<center>
+				<p> © Mr. Moonhead 2016. All rights reserved by Max Bye. </p>
+			</center>
+		</section>
 		
-		<script>
-		/*
-		* GO TO
-		* On click go to a different part of the page
-		* @param - STRING where - where on the page to go too
-		*/
-		function goTo(where){
-		  if(where == 'road'){
-			  // $('.roadmap').offset().top;
-		  }
-		}
-				
-		/*
-		* DISLOCATE NAVBAR
-		* When scroll dislocate the header (make it fixed)
-		* If scroll is 0 then remove fixed
-		*/
-			$( window).scroll(function() {
-				$('.titleContainer, header p span').hide();
-				console.log($(window).scrollTop());
-				if($(window).scrollTop() == 0){
-					$('.titleContainer , header p span').show();					
-				}
-				
-				var roadmap = $(window).height() - ( $('.roadmap').offset().top / 2 );
-				
-				if($(window).scrollTop() > roadmap){
-					console.log('roadmap');
-				}
-				
-			});
-    /* position: fixed; */
-    /* width: 100%; */
-    /* padding: 0 20%; */
-		</script>
+	
+			<!-- Javascript Files
+		================================================== -->
+		<script src="js/kindness/jquery.min.js"></script>
+		<script src="js/kindness/main.js"></script> <!-- Resource jQuery -->
+		<script src='js/kindness/nav.js'></script>
+		<script src="js/index.js"></script>
 
 . </body>
 </html>

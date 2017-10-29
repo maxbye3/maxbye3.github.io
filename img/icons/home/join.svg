@@ -9,14 +9,14 @@
 	.st3{fill:url(#SVGID_4_);}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="33" y1="76" x2="33" y2="586.04" gradientTransform="matrix(1 0 0 1 0 -46)">
-	<stop  offset="4.187192e-002" style="stop-color:#FF6A6A"/>
-	<stop  offset="1" style="stop-color:#FFD7CC"/>
+	<stop  offset="4.187192e-002" style="stop-color:#FFBE15"/>
+	<stop  offset="1" style="stop-color:#3FFF9C"/>
 </linearGradient>
 <path class="st0" d="M289,143.2v275.5c0,65.3-52.9,118.2-118.2,118.2h-275.5c-65.3,0-118.2-52.9-118.2-118.2V143.2
 	C-223,77.9-170.1,25-104.8,25h275.5C236.1,25,289,77.9,289,143.2z"/>
 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="33" y1="78.0205" x2="33" y2="580.3248" gradientTransform="matrix(1 0 0 1 0 -46)">
-	<stop  offset="2.463054e-003" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#E92F37"/>
+	<stop  offset="5.665025e-002" style="stop-color:#E20E09"/>
+	<stop  offset="1" style="stop-color:#67F079"/>
 </linearGradient>
 <path class="st1" d="M-104.8,531.1c-57,4.2-110.2-48.4-114.2-114.2V141.3c0-63,51.2-114.2,114.2-114.2h275.5
 	c63,0,114.2,51.2,114.2,114.2v275.5c0,63-51.2,114.2-114.2,114.2H-104.8z"/>
