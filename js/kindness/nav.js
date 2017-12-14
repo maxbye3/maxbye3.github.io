@@ -17,7 +17,7 @@
 				}, 700);
 				$('.titleContainer').show();
 				$('header p span').css('color','white');
-				$('header').css({'position':'relative','height':'35vh'});					
+				$('header').css({'position':'relative','height':'25vh'});					
 			}
 			else{
 				$('html,body').animate({
@@ -72,7 +72,7 @@
                 else{
 					$('.titleContainer').show();
 					$('header p span').css('color','white');
-					$('header').css({'position':'relative','height':'35vh'});					
+					$('header').css({'position':'relative','height':'25vh'});					
                 }
 				
 				if($('body').attr('scrolling') == 'false'){

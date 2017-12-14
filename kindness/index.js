@@ -35,6 +35,8 @@ function writeUserData(messageType,message,name) {
     name: name
   });
 
+  
+
   completeFeedback();
 
 }

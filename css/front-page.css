@@ -19,10 +19,16 @@
     display: block;
     text-align: -webkit-center;
     background: #9dd7e1;
+    background: url(../img/seigaiha.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	
   }
 
   header{
-    height: 35vh;
+    height: 25vh;
     padding: 0 20%;
     z-index: 10;
     top: 0px;
@@ -87,7 +93,7 @@
   }
 
   .blurb{
-    padding: 20vh 0 25vh 0;
+    padding: 10vh 10vw 25vh 10vw;
   }
 
   .blurb h1{
@@ -103,7 +109,8 @@
   }
 
   .blurb button{
-    width: 288px;
+    width: 100%;
+    min-width: 200px;
     padding: 8px;
     border-radius: 100px;
     border: 0px;
@@ -134,8 +141,13 @@
 	  
   	}
   	li{
-      width: 19.2%;
+      /* width: 19.2%; */
 	  }
+  }
+
+  .row{
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   /* CONTACT */
@@ -150,7 +162,7 @@
   }
 
   .questionSection{
-    border: red solid 1px; 
+    padding-top: 20px;
     width: 100%; 
     font-family: loveya; 
     background: orange;
@@ -163,10 +175,18 @@
   .questionSection .description{
     padding-top: 50px;
     color: white;
-    padding: 50px;
+    padding: 20px 50px 20px 50px;
     
   }
   .questionSection .form{
     font-family: sans-serif;
   }
+
+  #copyright p {
+    margin: -10px 0 1.5em 0;
+  }
   /* contact */
+
+  .ios{
+    background: #c83bb7 !important;
+  }
