@@ -57,13 +57,16 @@
 	font-size: 35px;
   }
 
-
+ li{
+   font-family: "Open Sans", sans-serif;
+   font-size: 10px;
+ }
   
-  ul{
+  .nav{
   	padding: 0px;
   }
 
-  li{
+  .nav li{
     list-style: none;
     width: 25%;
     float: left;
@@ -78,12 +81,12 @@
     padding: 5px;
   }
 
-  li a p{
+  .nav li a p{
     margin-top: 0px;
 		margin-bottom: 15px;
   }
 
-  li a img{
+  .nav li a img{
     width: 80%;
     max-width: 90px;
   }

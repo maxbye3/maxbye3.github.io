@@ -375,6 +375,7 @@ Main components
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
+  margin-left: 5px;
 }
 .cd-timeline-block:after {
   content: "";
