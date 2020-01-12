@@ -86,6 +86,21 @@ function homeClick(){
   $('body').animate({"scrollTop": "0px"}, 1000);
 }
 
+function ithembaClick(){
+  $(".iThemba").show();
+  $('html, body').animate({scrollTop: $(".iThemba").offset().top}, 1000);  
+}
+function bottomClick(){
+  $(".bottomChain").show();
+  $('html, body').animate({scrollTop: $(".bottomChain").offset().top}, 1000);  
+}
+function kindnessClick(){
+  $(".kindnessClick").show();
+  $('html, body').animate({scrollTop: $(".kindnessClick").offset().top}, 1000);  
+}
+
+
+
 function VFClick(){
   $(".virtuallyfree").show();
   $('html, body').animate({scrollTop: $(".virtuallyfree").offset().top}, 1000);  
