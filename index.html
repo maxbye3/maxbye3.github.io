@@ -1,1 +1,140 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <meta property="og:website" content="http://dropkindnessnotbombs.com/" />
+    <meta property="og:url" content="http://dropkindnessnotbombs.com/" />
+    <meta name="url" content="http://dropkindnessnotbombs.com" />
+    <meta name="identifier-URL" content="http://dropkindnessnotbombs.com" />
+    <meta property="og:type" content="app" />
+    <meta property="og:title" content="Drop Kindness Not Bombs" />
+    <meta
+      property="og:description"
+      content="100+ suggestions to kill lockdown boredom with kindness"
+    />
+    <meta
+      property="og:image"
+      content="https://lockdowntours.github.io/kindnessapp/img/kindnessLogo.png"
+    />
+    <meta
+      name="twitter:image"
+      content=" https://lockdowntours.github.io/kindnessapp/img/kindnessLogo.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Drop Kindness Not Bombs</title>
+  </head>
+  <body scroll="no" style="overflow: hidden">
+    <!-- CONFETTI -->
+    <div style="position: relative; z-index: 99"></div>
+    <button hidden id="startConfetti">Start</button>
+    <button hidden id="stopConfetti">Stop</button>
+    <button hidden id="restartConfetti">Restart</button>
+    <!-- confetti -->
+    <div w3-include-html="navbar.html"></div>
+    <div class="w-full md:pb-0 h-screen bg-cover bg-center kindnessBg">
+      <div class="pt-20 h-screen flex items-center justify-center">
+        <!-- WEBSITE CONTENT -->
+        <div
+          id="animationsHere"
+          class="animate__animated w-full sm:w-8/12 lg:w-6/12"
+        >
+          <div
+            class="md:text-lg bg-white text-white font-bold rounded-lg sm:border shadow-lg px-3 md:px-5 p-5 pb-2 mx-10 md:mx-0"
+            id="kindness__content"
+          >
+            <img
+              id="kindness__logo"
+              class="mx-auto w-40 md:w-60 rounded-full flex items-center justify-center kindnessLogo mb-5"
+              src="img/turquoise_icon.png"
+              alt="flower turquoise"
+            />
+            <img
+              id="kindness__selected-image"
+              class="mx-auto w-40 md:w-60 rounded-lg flex items-center justify-center hidden selectedKindnessImg mb-2 sm:mb-5"
+              src
+              alt="kindness suggestion image"
+            />
+            <p class="kindnessSuggestions text-black text-center mb-2"></p>
+            <button
+              disabled
+              class="md:text-lg button1 my-2 rounded-md bg-gradient-to-br from-green-400 px-1 p-5 w-full bg-indigo-800"
+            ></button>
+            <button
+              class="md:text-lg button2 my-2 rounded-md bg-gradient-to-br from-yellow-400 px-1 p-5 w-full bg-pink-500"
+            ></button>
+            <button
+              class="md:text-lg button3 my-2 rounded-md bg-gradient-to-br from-green-400 px-1 p-5 w-full bg-green-900"
+            ></button>
+            <p
+              class="underline naughty-text text-gray-700 text-center my-2 cursor-pointer"
+            >
+              Cancel
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- content -->
+    </div>
+    <div
+      class="z-0 absolute bottom-0 bg-white text-black w-full"
+      id="kindness__bottom-bar"
+    >
+      <div class="bg-black text-gray-300">
+        <div class="text-white text-xs md:text-base artistDisclaimer p-2"></div>
+        <div class="flex-row flex cookieDisclaimer">
+          <img src="img/cookie_monster.png" class="w-7 h-7" />
+          <p class="pt-1 text-xs md:text-base">
+            Website uses cookies 🍪 |
+            <u class="cursor-pointer" onclick="deleteData()"
+              >Delete site delete</u
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/jquery.confetti.js"></script>
+    <script src="js/include.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/views.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/localStorage.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/google-sheets.js"></script>
+    <script src="js/kindness.js"></script>
+    <script>
+      var saveKindness;
+      $(document).ready(function () {
+        var savedData = loadData() || {};
+        if (Object.keys(savedData.kindness).length !== 0) {
+          saveKindness = savedData.kindness;
+          kindnessSelected("success");
+        } else {
+          homepage();
+        }
+      });
+    </script>
+  </body>
+</html>

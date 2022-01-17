@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/old/style.css">
+<link rel="stylesheet" href="css/old/colors.css">
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<link rel="stylesheet" href="css/old/responsive.css"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<meta property="og:url"           content="http://dropkindnessnotbombs.com/" />
+<meta property="og:type"          content="app" />
+<meta property="og:title"         content="Drop Kindness Not Bombs" />
+<meta property="og:description"   content="100+ suggestions to kill lockdown boredom with kindness" />
+<meta property="og:image" content="https://lockdowntours.github.io/kindnessapp/img/kindnessLogo.png">
+<meta name="twitter:image" content=" https://lockdowntours.github.io/kindnessapp/img/kindnessLogo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+
+</head>
+<body>    
+    <!-- CONFETTI -->
+    <div style="position:relative;z-index:99;"></div>
+    <button hidden id="startConfetti">Start</button>
+    <button hidden id="stopConfetti">Stop</button>
+    <button hidden id="restartConfetti">Restart</button>        
+    <!-- confetti -->
+    <header>  
+        <div class="navbar bg-light navbar-light box-shadow">
+            <div class="d-flex justify-content-between w-100">
+            <div class="row">
+                <!-- mobile -->
+                <div class="isMobile col-1 pt-2 pl-1">
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarHeader"
+                        aria-controls="navbarHeader"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            <div class="col-6 ml-2">
+                <a class="navbar-brand d-flex align-items-center cursor-pointer">
+                    <h2 class="my-2 text-dark ml-3 ml-md-0 navbarHeader bebas kindnessTitle cursor-pointer" onclick="goAbout()">Drop Kindness Not Bombs</h2>
+                </a>
+            </div>
+            <!-- desktop -->
+            <div class="somethingToSay isDesktop">
+                <a onclick="contactMe()" class="cursor-pointer navbar-brand d-flex align-items-center">
+                    <h2 class="my-2 text-dark ml-3 navbarHeader bebas">I got something to say</h2>
+                    <img src="img/megaphone.png" class="megaphoneImg">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- MOBILE HEADER -->
+    <div class="isMobile navbar bg-light navbar-light somethingToSayMobile">
+        <h2 onclick="contactMe()" class="p-0 cursor-pointer my-2 text-dark ml-0 navbarHeader">
+            <img src="img/megaphone.png" class="megaphoneImg">
+            <span class="bebas text-dark bebas bigger ml-1"> I got something to say </span>
+        </h2>        
+    </div>
+    <!-- mobile header -->
+    <!-- LEVEL TYPE -->
+    <div class="levelBg">
+        <span class="levelStaticTxt">
+            Level: 
+            <span class="levelTxt">Simple</span>
+        </span>
+        <div class="levelCircle">200</div>
+    </div>
+    <!-- level type -->
+
+    <div class="bg"></div>
+    <div class="absolute reg-text failureContainer center">
+        <h3>Oh oh! Unable to get info!</h3>
+        <h3><button onclick="tryAgain()" class="btn btn-info tryAgainBtn">Click here to try again</button></h3>        
+    </div>
+    <div class="swipeContainer">
+        <div class="desktop leftSwipeHitBox"></div>
+        <div class="desktop rightSwipeHitBox"></div>
+        <div class="center bebas text-white">
+            <div class id="stage">
+                <div class="kindnessSelected statusHeading bigger">
+                    <p class="bigger m-0">
+                        <span class="strongRed">KINDNESS SELECTED:</span>
+                    </p>
+                </div>
+                <p class="reg-text line1">
+                    <span class="bigger green">What....</span> 
+                    <span class="blue">What is this thing?</span>
+                </p>
+                <p class="reg-text line2">
+                    100+ actions to make the world a better place to live in
+                </p>
+                <p class="reg-text websiteDisclaimer"></p>
+                <p class="reg-text websiteUrl"></p>
+                <div class="swipes">
+                    <p class="reg-text">
+                        <span class="bigger tapLeft">
+                            <span id="swipeColor1">
+                                <span class="interactiveTxt"></span> LEFT
+                            </span>
+                        </span> 
+                        <span class="leftSwipeTxt">
+                            if you wanna learn more
+                        </span>
+                    </p>
+                    <p class="reg-text">
+                        <span class="rightSwipeTxt">
+                            to get started
+                        </span>
+                        <span class="bigger">
+                            <span id="swipeColor2">
+                                <span class="interactiveTxt"></span> RIGHT
+                            </span>
+                        </span> 
+                    </p>
+                </div>            
+
+                <!-- WHAT'S NEXT -->
+                <div class="whatsNextContainer">
+                    <p class="reg-text">
+                        <span class="bigger">
+                            kindness complete? <span class="red cursor-pointer"><u>Click here</u></span>
+                        </span>
+                    </p>
+
+                </div>
+                <p onclick="goKindness()" class="reg-text cursor-pointer selectAgain">
+                <u class="selectAgainGrayTxt">or click here to select a new kindness</u>
+                </p>
+                <!-- what's next -->
+                <!-- EMAIL CONTAINER IS COMPLETE -->
+                <div class="reminderComplete m-10">
+                    <div class="enterEmailContainer px-2 py-1">
+                        <p class="reg-text bigger mb-0 mt-3">
+                            <span class="emailHeader">
+                                    <span class="darkPink">
+                                    Want a reminder?
+                                </span>
+                            </span>
+                        </p>
+                        <p class="emailContainerTxt m-2">
+                            Enter your email below to receive a gentle nagging later
+                        </p>
+                        <div class="enterEmail">
+                            <div class="input-group mb-1">
+                                <input type="text" class="form-control userEmailComplete w-25" placeholder="Your email">
+                                <div class="input-group-append">
+                                    <button disabled class="btn btn-success emailSavedComplete" onclick="emailSaved()">submit</button>
+                                </div>
+                            </div>                    
+                            <p class="privateDisclaimer">
+                                We ain't sharing your deets with no one. <span class='red'>Even if they ask nice.</span>
+                            </p>
+                        </div>
+                        <p class="whatsNextEmail m-25 mb-0 reg-text bigger text-black p-20">
+                            <u class='cursor-pointer bigger' onclick='goKindness()'>Click here to select a new kindness</u>
+                        </p>
+                    </div>
+                </div>
+            <!-- email is complete -->
+            </div>
+        </div>
+
+
+    <!-- IMAGE KUDOS -->
+    <div class="imageKudos"></div>
+
+    <!-- EMAIL IN PROGRESS  -->
+    <div class="reminderInProgress">
+        <div class="enterEmailContainer px-2 py-1">
+            <p class="reg-text bigger mb-0 mt-3 ml-2">
+                <span class="emailHeader bebas">
+                        <span class="darkPink">
+                        Want a reminder?
+                    </span>
+                </span>
+            </p>
+            <p class="emailContainerTxt m-2">
+                Enter your email below to receive a gentle nagging later
+            </p>
+            <div class="enterEmail ml-2">
+                <div class="input-group mb-1">
+                    <input type="text" class="form-control userEmailProgress" placeholder="Your email">
+                    <div class="input-group-append">
+                        <button disabled class="btn btn-success emailSavedProgress" onclick="emailSaved()">submit</button>
+                    </div>
+                </div>                    
+                <p class="privateDisclaimer">
+                    As Frodon once yelled from Mount Sire. Your details <span id="swipeColor4">"shall not be shared!"</span>
+                </p>
+            </div>
+            <p class="whatsNextEmail m-25 mb-0 reg-text bigger text-black p-20">
+                <u class='cursor-pointer bigger' onclick='goKindness()'>Click here to select a new kindness</u>
+            </p>
+        </div>
+    </div>
+    <!-- email progress -->
+
+        
+    <!-- FOLLOW ME -->
+    <div class="followMe">
+        <a href="https://twitter.com/mr_moonhead" target="_blank">
+            <img src="img/twitter.png" alt="twitter">
+        </a>
+        <a href="https://www.instagram.com/maxbye/" target="_blank">
+            <img src="img/instagram.png" alt="instagram">
+        </a>
+    </div>
+
+
+    <!-- DISCLAIMER -->
+    <div class="cookiedisclaimer">  
+
+        <p class="isDesktop text-white m-0">
+            <img src="img/cookie_monster.png" class="cookieImg">
+            THIS WEBSITE USES COOKIES
+            <span class="disclaimerLink">AND I'M COOL WITH THAT</span>
+        </p>
+        <p class="isMobile">
+            <img src="img/cookie_monster.png" class="cookieImg">
+            <span class="disclaimerLink">I'm cool with cookies</span>
+        </p> 
+        <p class="bg-light cursor-pointer" onclick="deleteAll()"><u>delete your site data</u></p>      
+        </div>
+        <div class="cookieDisclaimerBg"></div>
+    </div>    
+    <!-- disclaimer -->
+    
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-firestore.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js_old/firebase.js"></script>
+    <script src="js_old/jquery.confetti.js"></script>
+    <script src="js_old/localStorage.js"></script>
+    <script src="js_old/google-sheets.js"></script>
+    <script src="js_old/kindness-complete.js"></script>
+    <script src="js_old/email-reminder.js"></script>
+    <script src="js_old/mobile.js"></script>
+    <script src="js_old/swipes.js"></script>
+    <script src="js_old/views.js"></script>
+    <script src="js_old/intKindness.js"></script>
+    <script src="js_old/randomColor.js"></script>
+    <script src="js_old/init.js"></script>
+    <script>
+        getData();
+        $( document ).ready(function() {
+            init();
+        });
+    </script>
+</body>
+</html>

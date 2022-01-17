@@ -1,0 +1,131 @@
+.isMobile {
+  display: none;
+}
+
+.isDesktop {
+  display: block;
+}
+/*
+* WIDTH
+*/
+@media all and (min-width: 1200px) {
+
+  .kindnessSelectedTop .reg-text {
+    margin: 1vh;
+  }
+
+  #contactMessage {
+    font-size: 1.5vw;
+  }
+
+  .bigger {
+    font-size: 2vw;
+  }
+
+  .kindnessTop, .aboutTop, .contactTop, .completeTop, .progressTop, .kindnessSelectedTop {
+    top: 20vh;
+  }
+
+  .kindnessTop {
+    top: 25vh;
+  }
+
+  .progressTop{
+    top: 22vh;
+  }
+
+}
+
+@media all and (min-width: 130px) {
+  .reg-text{
+    font-size: 2.5vw;
+  }
+  .bigger{
+    font-size: 4vw;
+  }
+}
+
+@media all and (max-width: 700px) {
+
+  .isMobile {
+    display: block;
+  }
+  .kindnessTop, .aboutTop, .contactTop, .completeTop, .progressTop {   
+    top: 25vh;
+  }
+
+  .reg-text{
+    font-size: 5.5vw;
+    line-height: 4vh;
+  }
+  .bigger{
+    font-size: 6vw;
+  }
+
+  .isDesktop {
+    display: none;
+  }
+
+  .megaphoneImg {
+    width: 40px;
+    margin-top: -10px;
+    margin-left: 0px;
+    margin-right: 8px;
+  }
+
+  .disclaimerLink {
+    color: white;
+  }
+
+  .smallTxt {
+    font-size: 3.5vw;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .kindnessTop, .aboutTop, .contactTop, .completeTop, .progressTop {
+    top: 25vh;
+  }
+
+  .kindnessTitle{
+    font-size: 8.5vw;
+  }
+}
+/* width */
+/*
+* HEIGHT
+*/
+@media all and (max-height: 400px) {
+  .kindnessTop, .aboutTop, .contactTop, .completeTop, .progressTop {
+    top: 47vh;
+  }
+
+  .bg, .followMe, .rightSwipeHitBox, .leftSwipeHitBox {
+    height: 150%;
+  }
+
+  .followMe{
+    position: inherit;   
+    margin-top: 5px; 
+  }
+
+  .followMe img{
+    width: 40px;    
+  }
+}
+
+@media all and (max-height: 300px) {
+  .bg, .rightSwipeHitBox, .leftSwipeHitBox {
+    height: 170%;
+  }
+
+  .followMe{
+    position: inherit;   
+    margin-top: 10px; 
+  }
+
+  .followMe img{
+    width: 30px;    
+  }
+}
+/* height */

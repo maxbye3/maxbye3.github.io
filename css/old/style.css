@@ -1,0 +1,298 @@
+@font-face {
+  font-family: BebasNeue;
+  src: url(../font/BebasNeue-webfont.woff);
+}
+@font-face {
+  font-family: HelveticaNeueThin;
+  src: url(../font/helvetica/HelveticaNeueThin.ttf);
+}
+@font-face {
+  font-family: HelveticaNeuBold;
+  src: url(../font/helvetica/HelveticaNeueBd.ttf);
+}
+
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.levelTxtOffset{
+  margin-left: 0px;
+}
+
+.cursor-pointer{
+  cursor: pointer !important;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.leftSwipeHitBox{
+  cursor: w-resize;
+  position: absolute;
+  display: block;
+  width: 50vw;
+  left: 0px;
+  z-index: 5;
+  height: 85vh;
+  top: 15vh;
+}
+
+.rightSwipeHitBox{
+  cursor: e-resize;
+  position: absolute;
+  display: block;
+  width: 50vw;
+  margin-left: 50vw;
+  z-index: 6;
+  height: 85vh;
+  top: 15vh;
+}
+
+body{
+  background-color: black !important;
+  height: 100vh;
+  width: 100vw;
+}
+
+.smallTxt {
+  font-size: 2vw;
+  line-height: 12px;
+}
+
+.emailInput{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.bg {
+  background-image: url("../img/UO6pL1X.jpg");
+  /* NOTBAD: background-color: #1b029a; */
+  height: 90%; 
+  opacity: .5;
+
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tryAgainBtn{
+  margin-top: 30px;
+}
+
+.levelStaticTxt{
+  vertical-align: -12px;
+  font-family: HelveticaNeueThin;
+}
+
+.levelTxt{
+  font-family: HelveticaNeuBold;
+}
+
+.levelBg {
+  position: absolute;
+  z-index: 17;
+  padding-left: 12px;
+  display: block;
+  background: #67bbc4;
+  background: #ee752f;
+  color: white;
+  width: 150px;
+  height: 50px;
+  display: none;
+}
+
+a {
+  color: #9bc6f5 !important;
+}
+
+.levelCircle{
+  float: right;
+  border-radius: 200px;
+  width: 60px;
+  display: block;
+  background: #9dcdd3;
+  background: #ee9c6d;
+  padding: 14px;
+  margin-top: -5px;
+  font-size: 23px;
+  margin-right: -45px;
+  font-family: sans-serif;
+  padding-left: 12px;
+}
+
+.cookieImg{
+  height: 75px;
+}
+
+
+.disclaimerLink {
+  color: #c1c1c1;
+  vertical-align: .5px;
+  border-bottom: 1px white solid;
+  cursor: pointer;
+}
+.disclaimerLink:hover {
+  color: #80d6e6;
+  border-bottom: 1px #80d6e6 solid;
+}
+
+.followMe, .followMe img, .followMe a{
+  cursor: pointer;
+}
+/*
+* FOLLOW ME
+*/
+.followMe{
+  z-index: 1;
+  position: absolute;
+  color: white;
+  padding: 5px;
+  border-radius: 0px 0px 0px 5px;
+  position: absolute;
+  right: 0px;
+  top: 82px;
+}
+
+.followMe img {
+  width: 50px;
+}
+/* follow me */
+.imageKudos {
+  color: white;
+  padding-left: 5px;
+  background: rgba(0,0,0,0.5);
+}
+
+.bebas {
+  font-family: BebasNeue;
+}
+
+/*
+* SCREEN TOP
+*/
+.kindnessTop, .aboutTop, .contactTop, .completeTop, .progressTop, .kindnessSelectedTop {
+  position: absolute;
+  z-index: 2;
+  position: absolute;
+  top: 30vh;
+  width: 100vw;
+}
+
+.aboutTop {
+  top: 30vh;
+}
+
+.progressTop{
+  top: 25vh;
+}
+
+
+/* screen top */
+
+.center {
+  text-align: center;
+  width: 100vw;
+}
+
+.somethingToSay{
+  position: absolute; 
+  right: 0px;
+}
+
+.somethingToSayMobile{
+  border-top: solid 1px #999;
+}
+
+.isDesktop {
+  display: initial;
+}
+
+.isMobile { 
+  display: none;
+}
+
+.megaphoneImg{
+  width: 40px;
+  margin-top: -10px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.reg-text{  
+  color: white;
+  font-size: 3.5vw;
+  margin: 20px;
+}
+
+.bigger{
+  font-size: 5vw;
+}
+
+.navbar-dark-light{
+  background-color: rgba(0,0,0,0.4) !important;
+  color: white; 
+}
+
+/*
+* WHAT'S NEXT
+*/
+.whatsNextContainer{
+  border-top: 1px solid white;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: -5px;
+}
+
+.selectAgainGrayTxt{
+  color: #b9c2ef;
+  text-decoration: underline;
+}
+
+.selectAgain{
+  margin-top: 0px;
+}
+
+.whatsNextEmail {
+  color: #2f2e2e;
+  border-top: black solid 1px;
+  padding: 20px;
+}
+
+
+/* what's next */
+/*
+* EMAIL
+*/
+.enterEmailContainer{
+  background: white;
+  margin-top: 0px;
+}
+
+.emailContainerTxt {
+  color: rgb(82 79 79);
+}
+
+.emailEnterContainer {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+/* email */
+
+
+
+
+
+.kindnessSelectedTxt {
+  color: #1d2124;
+  -webkit-text-stroke: 1px white;
+}
+
+.line1{
+  margin-top: 5px;
+}
