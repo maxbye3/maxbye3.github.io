@@ -1,63 +1,63 @@
 function clickForAfrica() {
-  const ml4 = {}
-  ml4.opacityIn = [0, 1]
-  ml4.scaleIn = [0.2, 1]
-  ml4.scaleOut = 3
-  ml4.durationIn = 800
-  ml4.durationOut = 600
-  ml4.delay = 500
+  const africaText = {}
+  africaText.opacityIn = [0, 1]
+  africaText.scaleIn = [0.2, 1]
+  africaText.scaleOut = 3
+  africaText.durationIn = 800
+  africaText.durationOut = 600
+  africaText.delay = 500
 
   document.getElementById('africaContainer').innerHTML =
-    '<div class="ml4 text-center fixed h-full w-full flex items-center justify-center absolute">\
+    '<div class="text africaText text-center fixed h-full w-full flex items-center justify-center absolute">\
       <span class="africaFont animate-charcter absolute opacity-0 letters letters-1">Africa</span>\
     </div>'
 
   anime
     .timeline({ loop: false })
     .add({
-      targets: '.ml4 .letters-1',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn,
+      targets: '.africaText .letters-1',
+      opacity: africaText.opacityIn,
+      scale: africaText.scaleIn,
+      duration: africaText.durationIn,
     })
     .add({
-      targets: '.ml4 .letters-1',
+      targets: '.africaText .letters-1',
       opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
+      scale: africaText.scaleOut,
+      duration: africaText.durationOut,
       easing: 'easeInExpo',
-      delay: ml4.delay,
+      delay: africaText.delay,
     })
     .add({
-      targets: '.ml4 .letters-2',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn,
+      targets: '.africaText .letters-2',
+      opacity: africaText.opacityIn,
+      scale: africaText.scaleIn,
+      duration: africaText.durationIn,
     })
     .add({
-      targets: '.ml4 .letters-2',
+      targets: '.africaText .letters-2',
       opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
+      scale: africaText.scaleOut,
+      duration: africaText.durationOut,
       easing: 'easeInExpo',
-      delay: ml4.delay,
+      delay: africaText.delay,
     })
     .add({
-      targets: '.ml4 .letters-3',
-      opacity: ml4.opacityIn,
-      scale: ml4.scaleIn,
-      duration: ml4.durationIn,
+      targets: '.africaText .letters-3',
+      opacity: africaText.opacityIn,
+      scale: africaText.scaleIn,
+      duration: africaText.durationIn,
     })
     .add({
-      targets: '.ml4 .letters-3',
+      targets: '.africaText .letters-3',
       opacity: 0,
-      scale: ml4.scaleOut,
-      duration: ml4.durationOut,
+      scale: africaText.scaleOut,
+      duration: africaText.durationOut,
       easing: 'easeInExpo',
-      delay: ml4.delay,
+      delay: africaText.delay,
     })
     .add({
-      targets: '.ml4',
+      targets: '.africaText',
       opacity: 0,
       duration: 500,
       delay: 500,

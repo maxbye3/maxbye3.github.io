@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content="Africa | Fake Moon" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:description"
+      content="Music video for my first album on new album. Took ages. Please enjoy!"
+    />
+    <meta property="og:image" content="img/africa.png" />
+    <meta property="og:url" content="https://mrmoonhead.com/africa.htm" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>Africa</title>
     <link href="../css/tailwind.css" rel="stylesheet" type="text/css" />
     <link href="css/text.css" rel="stylesheet" type="text/css" />
@@ -10,7 +19,9 @@
   </head>
   <body>
     <!-- DISCLAIMER -->
-    <div class="fixed h-full w-full flex items-center justify-center">
+    <div
+      class="text fixed h-full w-full flex items-center justify-center bg-black text-white"
+    >
       <h2>Click for AFRICA</h2>
     </div>
     <!-- disclaimer -->
@@ -22,9 +33,19 @@
     <!-- CLICK FOR AFRICA -->
     <div
       onclick="clickForAfrica()"
-      class="fixed h-5/6 w-full flex items-center justify-center border border-indigo-600"
+      class="fixed h-full w-full flex items-center justify-center border border-indigo-600"
     ></div>
     <!-- click for africa -->
+
+    <!-- SPOTIFY CONTAINER -->
+    <div
+      class="text fixed h-10 w-full flex bg-black text-white"
+      style="background-color: #242529"
+    >
+      <img src="img/spotify.png" class="h-10 p-2" />
+      <p class="left">Click here to listen to song on spotify</p>
+    </div>
+    <!-- spotify -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <script src="js/africa.js"></script>
