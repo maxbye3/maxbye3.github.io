@@ -125,16 +125,16 @@
     <script src="js/google-sheets.js"></script>
     <script src="js/kindness.js"></script>
     <script>
-      var saveKindness;
+      var saveKindness
       $(document).ready(function () {
-        var savedData = loadData() || {};
+        var savedData = loadData() || {}
         if (Object.keys(savedData.kindness).length !== 0) {
-          saveKindness = savedData.kindness;
-          kindnessSelected("success");
+          saveKindness = savedData.kindness
+          kindnessSelected('success')
         } else {
-          homepage();
+          homepage()
         }
-      });
+      })
     </script>
   </body>
 </html>

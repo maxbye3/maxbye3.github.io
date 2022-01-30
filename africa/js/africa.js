@@ -1,4 +1,10 @@
+let intVideo = true
 function clickForAfrica() {
+  if (intVideo) {
+    document.getElementById('myVideo').play()
+    document.getElementById('disclaimer').style.display = 'none'
+    intVideo = false
+  }
   const africaText = {}
   africaText.opacityIn = [0, 1]
   africaText.scaleIn = [0.2, 1]
@@ -9,8 +15,12 @@ function clickForAfrica() {
 
   document.getElementById('africaContainer').innerHTML =
     '<div class="text africaText text-center fixed h-full w-full flex items-center justify-center absolute">\
-      <span class="africaFont animate-charcter absolute opacity-0 letters letters-1">Africa</span>\
-    </div>'
+  <span class="africaFont animate-charcter absolute opacity-0 letters letters-1">Africa</span>\
+  </div>\
+  <audio id="audio" src="assets/africa.mp3"></audio>'
+
+  var audio = document.getElementById('audio')
+  audio.play()
 
   anime
     .timeline({ loop: false })
@@ -62,4 +72,8 @@ function clickForAfrica() {
       duration: 500,
       delay: 500,
     })
+
+  setTimeout(() => {
+    document.getElementById('africaContainer').innerHTML = ''
+  }, 2000)
 }
