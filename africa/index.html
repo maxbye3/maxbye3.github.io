@@ -41,16 +41,29 @@
     <meta property="og:url" content="https://www.mrmoonhead.com/africa" /> -->
     <meta name="twitter:card" content="summary_large_image" />
     <title>Africa | Music Video</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="../css/tailwind.css" rel="stylesheet" type="text/css" />
     <link href="css/text.css" rel="stylesheet" type="text/css" />
     <link href="css/orientation.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body class="bg-black">
+    <!-- VIDEO -->
+    <video id="myVideo" class="fixed right-0 bottom-0 min-h-full min-w-full">
+      <source
+        src="https://drive.google.com/u/0/uc?export=download&confirm=ejOb&id=1BzjyP33riPT4FR6MccNYpkto02SLp9Sg"
+      />
+    </video>
+    <!-- src="https://drive.google.com/uc?export=download&id=19i053lX8nRtxGxoP6UMwRJ-A0L8TgDT0/view" -->
+    <!-- video -->
     <!-- DISCLAIMER -->
     <div
+      id="disclaimer"
       class="text fixed h-full w-full flex items-center justify-center bg-black text-white"
     >
-      <h2>Click for AFRICA v1</h2>
+      <div class="w-100 m-10 mt-0">
+        <h2>Click for AFRICA</h2>
+        <h2 class="text-xl">Make sure you have volume</h2>
+      </div>
     </div>
     <!-- disclaimer -->
 
@@ -61,19 +74,24 @@
     <!-- CLICK FOR AFRICA -->
     <div
       onclick="clickForAfrica()"
-      class="fixed h-full w-full flex items-center justify-center border border-indigo-600"
+      class="fixed h-full w-full flex items-center justify-center"
     ></div>
 
     <!-- click for africa -->
 
     <!-- SPOTIFY CONTAINER -->
-    <div
-      class="text fixed h-10 w-full flex bg-black text-white"
-      style="background-color: #242529"
+    <a
+      href="https://open.spotify.com/show/4FF1lI4eHhtK2oh43fIhD9"
+      target="_blank"
     >
-      <img src="img/spotify.png" class="h-10 p-2" />
-      <p class="left">Click here to listen to song on spotify</p>
-    </div>
+      <div
+        class="text fixed h-10 w-full flex bg-black text-white bottom-0"
+        style="background-color: #242529"
+      >
+        <img src="img/spotify.png" class="h-10 p-2" />
+        <p class="left text-sm mt-2">Click here to listen to song on spotify</p>
+      </div>
+    </a>
     <!-- spotify -->
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>

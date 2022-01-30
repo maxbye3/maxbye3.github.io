@@ -1,4 +1,10 @@
+let intVideo = true
 function clickForAfrica() {
+  if (intVideo) {
+    document.getElementById('myVideo').play()
+    document.getElementById('disclaimer').style.display = 'none'
+    intVideo = false
+  }
   const africaText = {}
   africaText.opacityIn = [0, 1]
   africaText.scaleIn = [0.2, 1]
@@ -66,4 +72,8 @@ function clickForAfrica() {
       duration: 500,
       delay: 500,
     })
+
+  setTimeout(() => {
+    document.getElementById('africaContainer').innerHTML = ''
+  }, 2000)
 }
