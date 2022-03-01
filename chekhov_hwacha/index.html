@@ -28,19 +28,27 @@
   <body class="bg-black">
     <!-- VIDEO -->
     <video
-      playsinline
-      id="myVideo"
       class="fixed right-0 bottom-0 min-h-full min-w-full max-h-screen"
+      playsinline
+      muted
+      autoplay
+      id="mapVideo"
     >
       <source
-        src="https://video.wixstatic.com/video/f8c1b4_7f177766bd2140b1828d492c706d5c9d/1080p/mp4/file.mp4"
+        src="https://video.wixstatic.com/video/f8c1b4_99293ff029274ec88bdf1c5343e40f27/720p/mp4/file.mp4"
       />
-      <!-- <source
-        src="https://drive.google.com/u/0/uc?export=download&confirm=BByF&id=1BzjyP33riPT4FR6MccNYpkto02SLp9Sg"
-      /> -->
     </video>
-    <!-- src="https://drive.google.com/uc?export=download&id=19i053lX8nRtxGxoP6UMwRJ-A0L8TgDT0/view" -->
-    <!-- video -->
+    <video
+      class="fixed right-0 bottom-0 min-h-full min-w-full max-h-screen"
+      playsinline
+      autoplay
+      controls
+      id="mainVideo"
+    >
+      <source
+        src="https://video.wixstatic.com/video/f8c1b4_b5bbef6bfefd41c5bf57f9aaee123569/720p/mp4/file.mp4"
+      />
+    </video>
     <!-- DISCLAIMER -->
     <div
       id="disclaimer"
@@ -59,14 +67,15 @@
 
     <!-- CLICK FOR AFRICA -->
     <div
-      onclick="clickForAfrica()"
-      class="fixed h-full w-full flex items-center justify-center"
+      style="height: 90%"
+      onclick="startVideo()"
+      class="fixed w-full flex items-center justify-center"
     ></div>
 
     <!-- click for africa -->
 
     <!-- SPOTIFY CONTAINER -->
-    <a
+    <!-- <a
       href="https://open.spotify.com/show/4FF1lI4eHhtK2oh43fIhD9"
       target="_blank"
     >
@@ -77,9 +86,8 @@
         <img src="img/spotify.png" class="h-10 p-2" />
         <p class="left text-sm mt-2">Click here to listen to song on spotify</p>
       </div>
-    </a>
+    </a> -->
     <!-- spotify -->
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-  <script src="js/africa.js"></script>
+  <script src="js/index.js"></script>
 </html>
