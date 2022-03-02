@@ -9,11 +9,11 @@ setInterval(() => {
 const touchdown = () => {
   if (initialClick) {
     document.getElementById('disclaimer').style.display = 'none'
-    mainVideo.play()
-    mapVideo.play()
     initialClick = false
     return
   }
+  mainVideo.play()
+  mapVideo.play()
   mainVideo.style.opacity = 0
   // console.log('touch down')
 }
