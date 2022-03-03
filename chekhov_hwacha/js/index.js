@@ -13,7 +13,7 @@ if (
   )
 ) {
   // some code..
-  document.getElementById('interactionType').innerHTML('')
+  document.getElementById('interactionType').remove()
 }
 
 const touchdown = () => {
