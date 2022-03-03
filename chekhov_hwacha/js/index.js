@@ -6,14 +6,24 @@ setInterval(() => {
   mapVideo.currentTime = mainVideo.currentTime
 }, 100)
 
+// on mobile
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  // some code..
+  document.getElementById('interactionType').innerHTML('')
+}
+
 const touchdown = () => {
+  mainVideo.play()
+  mapVideo.play()
   if (initialClick) {
     document.getElementById('disclaimer').style.display = 'none'
     initialClick = false
     return
   }
-  mainVideo.play()
-  mapVideo.play()
   mainVideo.style.opacity = 0
   // console.log('touch down')
 }
