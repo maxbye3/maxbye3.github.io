@@ -27,6 +27,11 @@ const touchdown = () => {
   mainVideo.style.opacity = 0
   // console.log('touch down')
 }
+
+const removeDisclaimer = () => {
+  document.getElementById('mapMode').remove()
+}
+
 const touchup = () => {
   mainVideo.style.opacity = 100
   // console.log('touch up')
