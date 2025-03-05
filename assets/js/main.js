@@ -6,15 +6,20 @@ $(function () {
 
     $('.preloader').delay(500).fadeOut(500);
 
-    
+
     //===== Sticky
 
     $(window).on('scroll', function (event) {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
+            $(".max-title").removeClass("text-black");
+            $(".max-title").addClass("text-white");
+
             $(".navbar-area").removeClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logo-1.png");
         } else {
+            $(".max-title").removeClass("text-white");
+            $(".max-title").addClass("text-black");
             $(".navbar-area").addClass("sticky");
             $(".navbar .navbar-brand img").attr("src", "assets/images/logo-2.png");
         }
@@ -54,8 +59,8 @@ $(function () {
 
     $(".navbar-nav a").on('click', function () {
         $(".navbar-toggler").removeClass('active');
-    });    
-    
+    });
+
 
     //===== testimonial active
 

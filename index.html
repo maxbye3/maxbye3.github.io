@@ -15,8 +15,11 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
     <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
@@ -27,8 +30,11 @@
                 <div class="row">
                     <div class="w-full">
                         <nav class="flex items-center justify-between navbar navbar-expand-lg">
-                            <a class="mr-4 navbar-brand" href="index.html">
-                                <img src="assets/images/logo-1.png" alt="Logo">
+                            <a class="icon mr-4 navbar-brand" href="index.html">
+                                <img class="float-left mr-4" src="assets/images/logo-1.png" alt="Logo">
+                                <h1 class="max-title text-white text-2xl mt-2 ml-4 pl-2 bebas-neue-regular">
+                                    maxbye.co
+                                </h1>
                             </a>
                             <button class="block navbar-toggler focus:outline-none lg:hidden" type="button"
                                 data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne"
@@ -539,7 +545,7 @@
             <footer id="footer" class="relative z-10 footer-area pt-120">
                 <div class="footer-bg" style="background-image: url(assets/images/footer-bg.svg);"></div>
                 <div class="container">
-                    <div class="footer-widget pb-120">
+                    <div class="footer-widget pb-10">
                         <div class="row">
                             <div class="w-full mt-12">
                                 <div class="row">
@@ -552,7 +558,7 @@
                                             </div>
                                             <form id="contact-form">
                                                 <textarea placeholder="Please write your message here" name="message"
-                                                    rows="4" cols="50" class="px-1 w-full"></textarea>
+                                                    rows="4" cols="50" class="p-4 mb-4 mt-12 w-full"></textarea>
                                                 <input class="main-btn gradient-btn" type="submit" value="Send">
                                             </form>
 
