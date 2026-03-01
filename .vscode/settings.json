@@ -3,6 +3,7 @@
     "**": true
   },
   "files.readonlyExclude": {
+    "index.html": true,
     "lib/custom_code/**": true,
     "lib/flutter_flow/custom_functions.dart": true,
     "pubspec.yaml": true,
