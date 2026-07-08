@@ -26,6 +26,61 @@
         background: #000;
       }
 
+      .fullscreen-gate {
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.86);
+        color: #f4f4f4;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        text-align: center;
+      }
+
+      .fullscreen-gate[hidden] {
+        display: none;
+      }
+
+      .fullscreen-gate__panel {
+        display: grid;
+        gap: 14px;
+        width: min(420px, 100%);
+      }
+
+      .fullscreen-gate__title {
+        margin: 0;
+        font-size: clamp(1.7rem, 8vw, 3rem);
+        line-height: 1;
+        font-weight: 900;
+      }
+
+      .fullscreen-gate__text {
+        margin: 0;
+        color: rgba(244, 244, 244, 0.78);
+        font-size: 1rem;
+        line-height: 1.35;
+      }
+
+      .fullscreen-gate__button {
+        min-height: 56px;
+        border: 0;
+        border-radius: 8px;
+        background: #dff9e8;
+        color: #091111;
+        font: 900 1rem/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        cursor: pointer;
+      }
+
+      .fullscreen-gate__button--ghost {
+        min-height: 44px;
+        background: transparent;
+        color: rgba(244, 244, 244, 0.78);
+        border: 1px solid rgba(244, 244, 244, 0.22);
+        font-weight: 700;
+      }
+
       .fallback {
         position: fixed;
         inset: auto 16px 16px;
@@ -52,6 +107,20 @@
       allow="autoplay; fullscreen; gamepad"
       allowfullscreen
     ></iframe>
+    <div id="fullscreenGate" class="fullscreen-gate">
+      <div class="fullscreen-gate__panel">
+        <h1 class="fullscreen-gate__title">Night Slip</h1>
+        <p class="fullscreen-gate__text">
+          Tap here first so the page can enter fullscreen before the game starts.
+        </p>
+        <button id="fullscreenStartButton" class="fullscreen-gate__button" type="button">
+          Play fullscreen
+        </button>
+        <button id="fullscreenSkipButton" class="fullscreen-gate__button fullscreen-gate__button--ghost" type="button">
+          Continue without fullscreen
+        </button>
+      </div>
+    </div>
     <noscript>
       <p class="fallback">
         JavaScript is disabled.
@@ -60,13 +129,45 @@
     </noscript>
     <script>
       const frame = document.querySelector("iframe");
-      function requestShellFullscreen() {
-        if (document.fullscreenElement) return;
-        document.documentElement.requestFullscreen().catch(() => {});
+      const fullscreenGate = document.querySelector("#fullscreenGate");
+      const fullscreenStartButton = document.querySelector("#fullscreenStartButton");
+      const fullscreenSkipButton = document.querySelector("#fullscreenSkipButton");
+
+      function hideFullscreenGate() {
+        fullscreenGate.hidden = true;
+        frame.focus();
       }
+
+      function showFullscreenGate() {
+        fullscreenGate.hidden = Boolean(document.fullscreenElement);
+      }
+
+      function requestShellFullscreen() {
+        if (document.fullscreenElement) {
+          hideFullscreenGate();
+          return Promise.resolve();
+        }
+        if (!document.documentElement.requestFullscreen) {
+          hideFullscreenGate();
+          return Promise.resolve();
+        }
+        return document.documentElement.requestFullscreen()
+          .then(hideFullscreenGate)
+          .catch(() => {
+            fullscreenGate.hidden = false;
+          });
+      }
+
+      fullscreenStartButton.addEventListener("click", requestShellFullscreen);
+      fullscreenSkipButton.addEventListener("click", hideFullscreenGate);
+      document.addEventListener("fullscreenchange", showFullscreenGate);
+
       window.addEventListener("message", (event) => {
         if (event.source !== frame.contentWindow) return;
-        if (event.data?.type === "nightslip-request-fullscreen") requestShellFullscreen();
+        if (event.data?.type === "nightslip-request-fullscreen") {
+          if (document.fullscreenElement) return;
+          fullscreenGate.hidden = false;
+        }
       });
     </script>
   </body>
