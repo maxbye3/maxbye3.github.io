@@ -58,5 +58,16 @@
         <a href="https://stealth-game-one.vercel.app">Open the stealth game directly.</a>
       </p>
     </noscript>
+    <script>
+      const frame = document.querySelector("iframe");
+      function requestShellFullscreen() {
+        if (document.fullscreenElement) return;
+        document.documentElement.requestFullscreen().catch(() => {});
+      }
+      window.addEventListener("message", (event) => {
+        if (event.source !== frame.contentWindow) return;
+        if (event.data?.type === "nightslip-request-fullscreen") requestShellFullscreen();
+      });
+    </script>
   </body>
 </html>
