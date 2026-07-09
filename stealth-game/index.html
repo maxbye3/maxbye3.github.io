@@ -138,8 +138,12 @@
         frame.focus();
       }
 
-      function showFullscreenGate() {
-        fullscreenGate.hidden = Boolean(document.fullscreenElement);
+      // Keep the game informed so it can re-request fullscreen on its next tap.
+      function notifyGameFullscreenState() {
+        frame.contentWindow?.postMessage(
+          { type: "nightslip-fullscreen-state", fullscreen: Boolean(document.fullscreenElement) },
+          "*"
+        );
       }
 
       function requestShellFullscreen() {
@@ -160,13 +164,25 @@
 
       fullscreenStartButton.addEventListener("click", requestShellFullscreen);
       fullscreenSkipButton.addEventListener("click", hideFullscreenGate);
-      document.addEventListener("fullscreenchange", showFullscreenGate);
+      // Never re-show the gate when fullscreen is lost mid-game: the gate is a
+      // full-viewport overlay that would swallow every touch (dead joystick).
+      // Instead tell the game, and it re-requests fullscreen on the next tap
+      // (a tap inside the iframe grants the parent transient user activation).
+      document.addEventListener("fullscreenchange", () => {
+        notifyGameFullscreenState();
+        if (document.fullscreenElement) hideFullscreenGate();
+      });
+      // In-iframe navigations (level loads) create a fresh game page that
+      // doesn't know the fullscreen state yet.
+      frame.addEventListener("load", notifyGameFullscreenState);
 
       window.addEventListener("message", (event) => {
         if (event.source !== frame.contentWindow) return;
         if (event.data?.type === "nightslip-request-fullscreen") {
           if (document.fullscreenElement) return;
-          fullscreenGate.hidden = false;
+          // Try to enter fullscreen directly with the activation propagated
+          // from the game's tap; fall back to the gate only if that fails.
+          requestShellFullscreen();
         }
       });
     </script>
